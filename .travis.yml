@@ -4,4 +4,4 @@ language: cpp
 
 script: 
   - echo "test"
-  - cmake complex
+  - make && make test
