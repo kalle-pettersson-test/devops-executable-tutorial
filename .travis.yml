@@ -5,4 +5,5 @@ language: cpp
 script: 
   - echo "test"
   - cd src
-  - make && make test
+  - make
+  - make test
