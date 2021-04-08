@@ -1,7 +1,7 @@
 dist: trusty
 sudo: false
 language: cpp
-install: make get-deps
 
 script: 
-  - make complex
+  - echo "test"
+  - cmake complex
