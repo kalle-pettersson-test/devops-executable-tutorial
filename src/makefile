@@ -3,7 +3,7 @@ FLAGS = -std=c++11 -g -Wall -pedantic
 std = -std=c++11
 
 complex: complex2.cpp
-	$(CC) $(FLAGS) complex2.cpp -o complex.out
+	$(CC) $(FLAGS) -c complex2.cpp -o complex.out
 
 
 
