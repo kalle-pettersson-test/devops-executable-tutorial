@@ -172,10 +172,6 @@ class MyTestSuite : public CxxTest::TestSuite {
         ASSERT_COMPLEX_EQUALS(a1,Complex(1,3));
 
 
-        Complex a2 = Complex(3,2)*Complex(3,-2)-1+(Complex(3,-7)/21) + 10;
-        ASSERT_COMPLEX_EQUALS(a2,Complex((double)155/7,(double)19/3));
-
-
     }
 
 
