@@ -36,16 +36,9 @@ public:
   friend Complex abs(const Complex& src);
   friend std::ostream& operator<<(std::ostream& ostream, const Complex& complex);
   friend std::istream& operator>>(std::istream& istream, Complex& complex);
-  friend constexpr Complex operator ""_i(unsigned long long int arg);
-  friend constexpr Complex operator ""_i(long double arg);
+
 
 };
 
-constexpr Complex operator ""_i(unsigned long long int arg){
-  return Complex(0.0,arg);
-}
-constexpr Complex operator ""_i(long double arg){
-  return Complex(0.0,arg);
-}
 
 #endif
