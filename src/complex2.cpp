@@ -147,54 +147,54 @@ std::istream& operator>>(std::istream& istream, Complex& complex){
 
 
 
-// int main(){
+int main(){
 
-//   Complex a1 = 10*((Complex(1,0)/Complex(1,2))*(Complex(1,3)/Complex(2,-4)));
-//   Complex a2 = Complex(3,2)*Complex(3,-2)-1+(Complex(3,-7)/21) + 10+ 10_i;
-//   Complex aa = Complex((double)155/7,(double)29/3);
+  Complex a1 = 10*((Complex(1,0)/Complex(1,2))*(Complex(1,3)/Complex(2,-4)));
+  Complex a2 = Complex(3,2)*Complex(3,-2)-1+(Complex(3,-7)/21) + 10+ 10_i;
+  Complex aa = Complex((double)155/7,(double)29/3);
 
-//   std::cout << a1 << std::endl;
-//   std::cout << a2 << std::endl;
-//   std::cout << aa << std::endl;
+  std::cout << a1 << std::endl;
+  std::cout << a2 << std::endl;
+  std::cout << aa << std::endl;
 
 
-//   // Complex y;
-//   // Complex z(2,3);
-//   // Complex x(-2,-3);
+  // Complex y;
+  // Complex z(2,3);
+  // Complex x(-2,-3);
 
-//   // // Complex k(x);
+  // // Complex k(x);
 
-//   // y = z+z+1;
-//   // y = abs(x);
-//   // Complex k = 3 + 5_i;
-//   // k -= 5 + 1_i * Complex(5, 3);
-//   // cout << k << endl;
+  // y = z+z+1;
+  // y = abs(x);
+  // Complex k = 3 + 5_i;
+  // k -= 5 + 1_i * Complex(5, 3);
+  // cout << k << endl;
 
-//   // // Complex a = +x;
-//   // int a = 1;
-//   // int b = +a;
-//   // cout << b << endl;  
+  // // Complex a = +x;
+  // int a = 1;
+  // int b = +a;
+  // cout << b << endl;  
 
-//   // std::cout << y / 6 << std::endl;
-//   // std::cout << Complex(6, 6) / 6 << std::endl;
-//   // // cout << x << endl;
-//   // // cout << real(y) << endl;
-//   // // cout << abs(x) << endl;
+  // std::cout << y / 6 << std::endl;
+  // std::cout << Complex(6, 6) / 6 << std::endl;
+  // // cout << x << endl;
+  // // cout << real(y) << endl;
+  // // cout << abs(x) << endl;
 
-//   // std::cout << (z == y)<< std::endl;
+  // std::cout << (z == y)<< std::endl;
   
 
-//   // Complex b(1,1);
-//   // // b = -b;
-//   // std::cout << b<< std::endl;
+  // Complex b(1,1);
+  // // b = -b;
+  // std::cout << b<< std::endl;
 
-//   // Complex c(2,2);
-//   // b /=c;
-//   // Complex k = Complex(1,1)/c;
-//   // std::cout << b << std::endl;
-//   // std::cout << k << std::endl;
-//   return 0;
-// }
+  // Complex c(2,2);
+  // b /=c;
+  // Complex k = Complex(1,1)/c;
+  // std::cout << b << std::endl;
+  // std::cout << k << std::endl;
+  return 0;
+}
 
 
 // // // TODO:

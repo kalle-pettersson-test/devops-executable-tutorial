@@ -2,8 +2,8 @@ CC = g++
 FLAGS = -std=c++11 -g -Wall -pedantic
 std = -std=c++11
 
-complex: complex.cpp
-	$(CC) $(FLAGS) complex.cpp -o complex.out
+complex: complex2.cpp
+	$(CC) $(FLAGS) complex2.cpp -o complex.out
 
 
 
