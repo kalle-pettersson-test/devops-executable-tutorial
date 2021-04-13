@@ -164,15 +164,7 @@ class MyTestSuite : public CxxTest::TestSuite {
     }
 
 
-    void testStaticDefinition(){
 
-        Complex k = 5_i;
-        Complex a = 5+ 5_i;
-
-        TS_ASSERT_EQUALS(k == Complex(0,5), 1);
-        TS_ASSERT_EQUALS(a == Complex(5,5), 1);
-
-    }
 
 
     void testMathExpressions(){
@@ -180,8 +172,8 @@ class MyTestSuite : public CxxTest::TestSuite {
         ASSERT_COMPLEX_EQUALS(a1,Complex(1,3));
 
 
-        Complex a2 = Complex(3,2)*Complex(3,-2)-1+(Complex(3,-7)/21) + 10+ 10_i;
-        ASSERT_COMPLEX_EQUALS(a2,Complex((double)155/7,(double)29/3));
+        Complex a2 = Complex(3,2)*Complex(3,-2)-1+(Complex(3,-7)/21) + 10;
+        ASSERT_COMPLEX_EQUALS(a2,Complex((double)155/7,(double)19/3));
 
 
     }

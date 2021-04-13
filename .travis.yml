@@ -6,7 +6,6 @@ script:
   - echo "test"
   - cd src
   - g++ -v
-  - sudo apt-get update -y
   - sudo apt-get install -y cxxtest
   - make complex
   - make tests
