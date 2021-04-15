@@ -1,24 +1,19 @@
 CC = g++
-FLAGS = -std=c++11 -g -Wall -pedantic
 std = -std=c++11
 
-complex: complex2.cpp
-	$(CC) $(FLAGS) -c complex2.cpp -o complex.out
+complex: complex.cpp
+	$(CC) $(std) -c complex.cpp -o complex.o
 
 
+main: main.cpp complex.o
+	$(CC) $(std) main.cpp -o main.out complex.o
 
-tests: complex2.cpp testrunner.cpp complexTests.cpp
+
+tests: complex.cpp testrunner.cpp complexTests.cpp
 	cxxtestgen --error-printer -o testrunner.cpp complexTests.cpp
-	$(CC) $(std) -c complex2.cpp -o complex.o
+	$(CC) $(std) -c complex.cpp -o complex.o
 	$(CC) $(std) -o simple_test.out -I cxxtest/ \testrunner.cpp complex.o
 	./simple_test.out
-
-
-
-skolTest: complex.cpp testrunner.cpp complexTests.cpp
-	/info/DD2387/labs/cxxtest/cxxtestgen.py --error-printer -o testrunner.cpp complexTests.cpp
-	$(CC) $(std) -c -o complex.o complex.cpp
-	$(CC) $(std) -o test.out -I /info/DD2387/labs/cxxtest \testrunner.cpp complex.o	
 
 clear: 
 	rm -f *.out *.o 	

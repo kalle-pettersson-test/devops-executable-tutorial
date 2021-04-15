@@ -1,6 +1,6 @@
 #include <cxxtest/TestSuite.h>
 
-#include "complex2.h"
+#include "complex.h"
 
 
 class MyTestSuite : public CxxTest::TestSuite {

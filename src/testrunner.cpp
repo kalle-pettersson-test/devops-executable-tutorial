@@ -123,15 +123,9 @@ public:
  void runTest() { suite_MyTestSuite.testNotEqual(); }
 } testDescription_suite_MyTestSuite_testNotEqual;
 
-static class TestDescription_suite_MyTestSuite_testStaticDefinition : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testStaticDefinition() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 167, "testStaticDefinition" ) {}
- void runTest() { suite_MyTestSuite.testStaticDefinition(); }
-} testDescription_suite_MyTestSuite_testStaticDefinition;
-
 static class TestDescription_suite_MyTestSuite_testMathExpressions : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testMathExpressions() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 178, "testMathExpressions" ) {}
+ TestDescription_suite_MyTestSuite_testMathExpressions() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 170, "testMathExpressions" ) {}
  void runTest() { suite_MyTestSuite.testMathExpressions(); }
 } testDescription_suite_MyTestSuite_testMathExpressions;
 

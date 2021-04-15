@@ -1,84 +1,93 @@
 #include <iostream>
 #include "complex.h"
 
-// <===========================Member operations=============================================>
-Complex& Complex::operator= (Complex const& src) {
-  this->imaginary = src.img();
-  this->realPart = src.real();
+// <===========================Member functions=============================================>
 
+// Override =
+Complex& Complex::operator= (Complex const& src) {
+  this->_real = src._real;
+  this->_img = src._img;
   return *this;
 }
 // Override +=
 Complex& Complex::operator+= (Complex const& src) {
-  Complex temp(real()+src.real(),img()+src.img());
-  *this = temp;
+  this->_real += src._real;
+  this->_img += src._img;
   return *this;
 }
 // Override -=
 Complex& Complex::operator-= (Complex const& src) {
-  Complex temp(real()-src.real(),img()-src.img());
-  *this = temp;
+  this->_real -= src._real;
+  this->_img -= src._img;
   return *this;
 }
 // Override /=
 Complex& Complex::operator/= (Complex const& src) {
-  double tReal = (real()*src.real()+img()*src.img())/(src.img()*src.img() + src.real()*src.real());
-  double tImg = (img()*src.real()-real()*src.img())/(src.img()*src.img() + src.real()*src.real());
-  Complex tmp(tReal,tImg);
-  *this = tmp;
+  Complex tmp;
+  tmp._real = (_real*src._real+_img*src._img)/(src._img*src._img + src._real*src._real);
+  tmp._img = (_img*src._real-_real*src._img)/(src._img*src._img + src._real*src._real);
+  this->_real = tmp._real;
+  this->_img = tmp._img;
   return *this;
 }
 // Override *= 
 Complex& Complex::operator*= (Complex const& src) {
-  double tReal = real()*src.real()-img()*src.img();
-  double tImg = real()*src.img()+src.real()*img();
-  Complex tmp(tReal,tImg);
-  // std::cout << real << " : "<< img << std::endl;
-  *this = tmp;
+  Complex tmp;
+  tmp._real = _real*src._real-_img*src._img;
+  tmp._img = _real*src._img+src._real*_img;
+  this->_real = tmp._real;
+  this->_img = tmp._img;
+
   return *this;
-} 
+}
 
+double & Complex::real(){
+  return _real;
+}
 
+double & Complex::img(){
+  return _img;
+}
 
 // <=====================================Non-member functions ================================================>
+
 // overload binary + operator 
 Complex operator+(const Complex& lhs, const Complex& rhs){
-  return Complex(lhs.real() + rhs.real(),lhs.img() + rhs.img());
+  return Complex(lhs._real + rhs._real,lhs._img + rhs._img);
 }
 
 // overload unary+ operator 
 Complex operator+(const Complex& src){
-  return Complex(src.real(),src.img());
+  return Complex(src._real,src._img);
 }
 
 // overload binary - operator 
 Complex operator-(const Complex& lhs, const Complex& rhs){
-  return Complex(lhs.real() - rhs.real(),lhs.img() - rhs.img());
+  return Complex(lhs._real - rhs._real,lhs._img - rhs._img);
 }
 
 // overload unary - operator 
 Complex operator-(const Complex& src){
-  return Complex(-src.real(),-src.img());
+  return Complex(-src._real,-src._img);
 }
 
-// overload * operator TODO
+// overload * operator
 Complex operator*(const Complex& lhs, const Complex& rhs){
   Complex tmp = lhs;
   tmp *=rhs;
   return tmp;
 }
 
-// overload / operator  TODO
+// overload / operator
 Complex operator/(const Complex& lhs, const Complex& rhs){
   Complex tmp = lhs;
   tmp /=rhs;
   return tmp;
 }
 
-
 // Overloading ==
 bool operator==(const Complex& lhs, const Complex& rhs){
-  if(lhs.real() == rhs.real() && lhs.img()==rhs.img()){
+  if(lhs._real == rhs._real && lhs._img==rhs._img){
     return true;
   }
   return false;
@@ -90,25 +99,21 @@ bool operator!=(const Complex& lhs, const Complex& rhs){
 }
 
 double real(const Complex& src){
-  return src.real();
+  return src._real;
 }
 
 double imag(const Complex& src){
-  return src.img();
+  return src._img;
 }
 
 // Uses the standard abs method which takes a long long as input
 Complex abs(const Complex& src){
-  return Complex(abs((long long)src.real()),abs((long long)src.img()));
+  return Complex(abs((long long)src._real),abs((long long)src._img));
 }
-
-// Verkar fungera men använder inte commandot man skulle använda.
-
-
 
 // Override << operator
 std::ostream& operator<<(std::ostream& ostream, const Complex& complex){
-  ostream << complex.real() << " + "<<complex.img() << "i";
+  ostream << complex._real << " + "<<complex._img << "i";
   return ostream;
 }
 
@@ -121,64 +126,15 @@ std::istream& operator>>(std::istream& istream, Complex& complex){
     s = s.substr(1, s.size() - 2);
     if(s.find(',') != std::string::npos){ // on the form (real,img)
       int temp = s.find(',');
-      complex.real = std::stod(s.substr(0,temp));
-      complex.img = std::stod(s.substr(temp+1,s.size()-1));
+      complex._real = std::stod(s.substr(0,temp));
+      complex._img = std::stod(s.substr(temp+1,s.size()-1));
     } else { // on the form (real)
-      complex.real = std::stod(s);
-      complex.img = 0;
+      complex._real = std::stod(s);
+      complex._img = 0;
     }
   } else{ // on the form real
-    complex.real = std::stod(s);
-    complex.img = 0;
+    complex._real = std::stod(s);
+    complex._img = 0;
   }
   return istream;
 }
-
-
-
-
-
-// int main()
-// {
-//   Complex y;
-//   Complex z(2,3);
-//   // Complex x(-2,-3);
-
-//   // // Complex k(x);
-
-//   // y = z+z+1;
-//   // y = abs(x);
-//   // Complex k = 3 + 5_i;
-//   // k -= 5 + 1_i * Complex(5, 3);
-//   // cout << k << endl;
-
-//   // // Complex a = +x;
-//   // int a = 1;
-//   // int b = +a;
-//   // cout << b << endl;  
-
-//   // std::cout << y / 6 << std::endl;
-//   // std::cout << Complex(6, 6) / 6 << std::endl;
-//   // // cout << x << endl;
-//   // // cout << real(y) << endl;
-//   // // cout << abs(x) << endl;
-
-//   // std::cout << (z == y)<< std::endl;
-  
-
-//   Complex b(1,1);
-//   // b = -b;
-//   std::cout << b<< std::endl;
-
-//   Complex c(2,2);
-//   b /=c;
-//   Complex k = Complex(1,1)/c;
-//   std::cout << b << std::endl;
-//   std::cout << k << std::endl;
-//   return 0;
-// }
-
-
-// TODO:
-
-// tänkt på hur man ska printa ut tal, hur ska komplex: Complex(0,0), Complex(1,0), Complex(0,1), Complex(1,1)
