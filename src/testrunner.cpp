@@ -45,89 +45,29 @@ public:
  void runTest() { suite_MyTestSuite.testTwoParamConstructor(); }
 } testDescription_suite_MyTestSuite_testTwoParamConstructor;
 
-static class TestDescription_suite_MyTestSuite_testCopyConstructor : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testCopyConstructor() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 32, "testCopyConstructor" ) {}
- void runTest() { suite_MyTestSuite.testCopyConstructor(); }
-} testDescription_suite_MyTestSuite_testCopyConstructor;
-
 static class TestDescription_suite_MyTestSuite_testassignmentEqual : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testassignmentEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 39, "testassignmentEqual" ) {}
+ TestDescription_suite_MyTestSuite_testassignmentEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 32, "testassignmentEqual" ) {}
  void runTest() { suite_MyTestSuite.testassignmentEqual(); }
 } testDescription_suite_MyTestSuite_testassignmentEqual;
 
-static class TestDescription_suite_MyTestSuite_testplusEqual : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testplusEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 47, "testplusEqual" ) {}
- void runTest() { suite_MyTestSuite.testplusEqual(); }
-} testDescription_suite_MyTestSuite_testplusEqual;
-
-static class TestDescription_suite_MyTestSuite_testminusEqual : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testminusEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 57, "testminusEqual" ) {}
- void runTest() { suite_MyTestSuite.testminusEqual(); }
-} testDescription_suite_MyTestSuite_testminusEqual;
-
-static class TestDescription_suite_MyTestSuite_testtimesEqual : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testtimesEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 67, "testtimesEqual" ) {}
- void runTest() { suite_MyTestSuite.testtimesEqual(); }
-} testDescription_suite_MyTestSuite_testtimesEqual;
-
-static class TestDescription_suite_MyTestSuite_testDivEqual : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testDivEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 81, "testDivEqual" ) {}
- void runTest() { suite_MyTestSuite.testDivEqual(); }
-} testDescription_suite_MyTestSuite_testDivEqual;
-
-static class TestDescription_suite_MyTestSuite_testUnaryOperators : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testUnaryOperators() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 97, "testUnaryOperators" ) {}
- void runTest() { suite_MyTestSuite.testUnaryOperators(); }
-} testDescription_suite_MyTestSuite_testUnaryOperators;
-
 static class TestDescription_suite_MyTestSuite_testBinaryPlus : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testBinaryPlus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 112, "testBinaryPlus" ) {}
+ TestDescription_suite_MyTestSuite_testBinaryPlus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 41, "testBinaryPlus" ) {}
  void runTest() { suite_MyTestSuite.testBinaryPlus(); }
 } testDescription_suite_MyTestSuite_testBinaryPlus;
 
 static class TestDescription_suite_MyTestSuite_testBinaryMinus : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testBinaryMinus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 120, "testBinaryMinus" ) {}
+ TestDescription_suite_MyTestSuite_testBinaryMinus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 51, "testBinaryMinus" ) {}
  void runTest() { suite_MyTestSuite.testBinaryMinus(); }
 } testDescription_suite_MyTestSuite_testBinaryMinus;
 
-static class TestDescription_suite_MyTestSuite_testMult : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testMult() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 127, "testMult" ) {}
- void runTest() { suite_MyTestSuite.testMult(); }
-} testDescription_suite_MyTestSuite_testMult;
-
-static class TestDescription_suite_MyTestSuite_testDiv : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testDiv() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 136, "testDiv" ) {}
- void runTest() { suite_MyTestSuite.testDiv(); }
-} testDescription_suite_MyTestSuite_testDiv;
-
 static class TestDescription_suite_MyTestSuite_testAbs : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testAbs() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 145, "testAbs" ) {}
+ TestDescription_suite_MyTestSuite_testAbs() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 61, "testAbs" ) {}
  void runTest() { suite_MyTestSuite.testAbs(); }
 } testDescription_suite_MyTestSuite_testAbs;
-
-static class TestDescription_suite_MyTestSuite_testNotEqual : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testNotEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 157, "testNotEqual" ) {}
- void runTest() { suite_MyTestSuite.testNotEqual(); }
-} testDescription_suite_MyTestSuite_testNotEqual;
-
-static class TestDescription_suite_MyTestSuite_testMathExpressions : public CxxTest::RealTestDescription {
-public:
- TestDescription_suite_MyTestSuite_testMathExpressions() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 170, "testMathExpressions" ) {}
- void runTest() { suite_MyTestSuite.testMathExpressions(); }
-} testDescription_suite_MyTestSuite_testMathExpressions;
 
 #include <cxxtest/Root.cpp>
 const char* CxxTest::RealWorldDescription::_worldName = "cxxtest";
