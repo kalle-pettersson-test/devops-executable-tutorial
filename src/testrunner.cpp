@@ -45,27 +45,33 @@ public:
  void runTest() { suite_MyTestSuite.testTwoParamConstructor(); }
 } testDescription_suite_MyTestSuite_testTwoParamConstructor;
 
+static class TestDescription_suite_MyTestSuite_testGetters : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_MyTestSuite_testGetters() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 32, "testGetters" ) {}
+ void runTest() { suite_MyTestSuite.testGetters(); }
+} testDescription_suite_MyTestSuite_testGetters;
+
 static class TestDescription_suite_MyTestSuite_testassignmentEqual : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testassignmentEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 32, "testassignmentEqual" ) {}
+ TestDescription_suite_MyTestSuite_testassignmentEqual() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 38, "testassignmentEqual" ) {}
  void runTest() { suite_MyTestSuite.testassignmentEqual(); }
 } testDescription_suite_MyTestSuite_testassignmentEqual;
 
 static class TestDescription_suite_MyTestSuite_testBinaryPlus : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testBinaryPlus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 41, "testBinaryPlus" ) {}
+ TestDescription_suite_MyTestSuite_testBinaryPlus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 47, "testBinaryPlus" ) {}
  void runTest() { suite_MyTestSuite.testBinaryPlus(); }
 } testDescription_suite_MyTestSuite_testBinaryPlus;
 
 static class TestDescription_suite_MyTestSuite_testBinaryMinus : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testBinaryMinus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 51, "testBinaryMinus" ) {}
+ TestDescription_suite_MyTestSuite_testBinaryMinus() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 57, "testBinaryMinus" ) {}
  void runTest() { suite_MyTestSuite.testBinaryMinus(); }
 } testDescription_suite_MyTestSuite_testBinaryMinus;
 
 static class TestDescription_suite_MyTestSuite_testAbs : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_MyTestSuite_testAbs() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 61, "testAbs" ) {}
+ TestDescription_suite_MyTestSuite_testAbs() : CxxTest::RealTestDescription( Tests_MyTestSuite, suiteDescription_MyTestSuite, 67, "testAbs" ) {}
  void runTest() { suite_MyTestSuite.testAbs(); }
 } testDescription_suite_MyTestSuite_testAbs;
 
