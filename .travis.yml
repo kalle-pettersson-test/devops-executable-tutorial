@@ -11,3 +11,4 @@ script:
   - make complex
   - echo "Running tests"
   - make tests
+  - ./simple_test.out

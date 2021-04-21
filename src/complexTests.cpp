@@ -29,6 +29,12 @@ class MyTestSuite : public CxxTest::TestSuite {
         TS_ASSERT_EQUALS(a.img(), 3);
     }
 
+    void testGetters(){
+        Complex a(2,3);
+        TS_ASSERT_EQUALS(2,a.real());
+        TS_ASSERT_EQUALS(3,a.img());
+    }
+
     void testassignmentEqual(){
         Complex a(2,3);
         Complex b = a;

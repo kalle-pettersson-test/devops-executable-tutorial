@@ -1,4 +1,3 @@
-#include <iostream>
 #include "complex.h"
 
 // <===========================Member functions=============================================>
@@ -34,10 +33,4 @@ Complex operator-(const Complex& lhs, const Complex& rhs){
 // Uses the standard abs method which takes a long long as input
 Complex abs(const Complex& src){
   return Complex(abs((long long)src._real),abs((long long)src._img));
-}
-
-// Override << operator
-std::ostream& operator<<(std::ostream& ostream, const Complex& complex){
-  ostream << complex._real << " + "<<complex._img << "i";
-  return ostream;
 }
