@@ -1,3 +1,4 @@
+#include "iostream"
 #include "complex.h"
 
 // <===========================Member functions=============================================>
@@ -32,5 +33,5 @@ Complex operator-(const Complex& lhs, const Complex& rhs){
 
 // Uses the standard abs method which takes a long long as input
 Complex abs(const Complex& src){
-  return Complex(std::abs((long long)src._real),std::abs((long long)src._img));
+  return Complex(abs((long long)src._real),abs((long long)src._img));
 }
